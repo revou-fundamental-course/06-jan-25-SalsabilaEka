@@ -13,8 +13,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Modal */
-/* Modal Styling */
-/* Modal Styling */
 .modal {
     position: fixed;
     top: 0;
@@ -25,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Menambahkan z-index tinggi */
+    z-index: 9999; 
 }
 
 .modal-content {
@@ -35,8 +33,8 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
     width: 300px;
-    position: relative; /* Menambahkan position relative */
-    z-index: 10000; /* z-index lebih tinggi dari modal overlay */
+    position: relative; 
+    z-index: 10000; 
 }
 
 .modal-content h2 {
@@ -77,11 +75,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-icon {
-    border-radius: 50%;
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.logo-image {
+    width: 40px; 
     height: 40px;
-    width: 40px;
-    background-image: url(/asset/logo.png);
-    background-size: cover;
+}
+
+.logo-text {
+    font-size: 20px; 
+    font-weight: bold; 
+    color: white;
 }
 
 nav {
@@ -107,7 +114,7 @@ nav > a:hover {
 .banner-image {
     margin: 0;
     padding: 0;
-    height: 450px;
+    height: 680px;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -115,30 +122,33 @@ nav > a:hover {
 
 /* Welcome text container */
 #home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 30px 50px;
+    padding: 30px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: auto;
-    min-width: 300px;
+    width: 80%; 
+    max-width: 600px; 
 }
 
 #home-page h1 {
     margin: 0 0 10px 0;
     color: #2c3e50;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
-
 #home-page p {
     margin: 0;
     color: #34495e;
-    font-size: 1.2rem;
+    font-size: 20px;
 }
 
 .banner-image-1 {
@@ -157,7 +167,6 @@ section {
     margin: 0;
     padding: 0;
 }
-
 
 /* Profile Section */
 .profile {
@@ -439,14 +448,6 @@ button:hover {
     font-weight: 600;
 }
 
-/* Responsive Design */
-@media only screen and (max-width: 768px) {
-    form, #result-form {
-        min-width: 300px;
-        padding: 30px;
-    }
-
-}
 
 /* Footer */
 footer {
@@ -457,7 +458,42 @@ footer {
     color: white;
 }
 
-/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    #message-us .content {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    form, #result-form {
+        min-width: auto; 
+        width: 100%; 
+        padding: 20px; 
+        box-shadow: none; 
+    }
+
+    label {
+        font-size: 14px; 
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    textarea {
+        padding: 10px; 
+        font-size: 14px; 
+    }
+
+    button {
+        font-size: 14px; 
+        padding: 12px 20px; 
+    }
+
+    .gender-options {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+}
+
 @media only screen and (max-width: 480px) {
     .main-header {
         flex-direction: column;
