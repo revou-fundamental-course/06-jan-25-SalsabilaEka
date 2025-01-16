@@ -152,15 +152,15 @@ nav > a:hover {
 }
 
 .banner-image-1 {
-    background-image: url(/asset/banner1.png);
+    background-image: url(asset/banner1.png);
 }
 
 .banner-image-2 {
-    background-image: url(/asset/banner2.png);
+    background-image: url(asset/banner2.png);
 }
 
 .banner-image-3 {
-    background-image: url(/asset/banner3.png);
+    background-image: url(asset/banner3.png);
 }
 
 section {
